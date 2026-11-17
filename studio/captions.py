@@ -83,7 +83,7 @@ def srt(plan, max_chars=42):
             if group:
                 cues.append(group)
     out = []
-    for g in cues:
+    for i, g in enumerate(cues):
         words = [w for w, _, _ in g]
         text, line1 = " ".join(words), []
         if len(text) > max_chars:
@@ -92,6 +92,9 @@ def srt(plan, max_chars=42):
                     break
                 line1.append(w)
             text = " ".join(line1) + "\n" + " ".join(words[len(line1):])
-        out.append(f"{n}\n{_ts(g[0][1])} --> {_ts(g[-1][2] + 0.15)}\n{text}\n")
+        start, end = g[0][1], g[-1][2] + 0.15
+        if i + 1 < len(cues):  # never overlap the next cue
+            end = max(start + 0.3, min(end, cues[i + 1][0][1] - 0.01))
+        out.append(f"{n}\n{_ts(start)} --> {_ts(end)}\n{text}\n")
         n += 1
     return "\n".join(out)

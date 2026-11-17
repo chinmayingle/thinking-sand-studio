@@ -55,6 +55,8 @@ def hook(f):
   is added automatically: the question, "Tell me in the comments", like/share/subscribe, the logo,
   "The Thinking Sand" and "@TheThinkingSand".
 - Scenes fade through the background at both ends, so any scene can be re-rendered alone.
+- Encoding: H.264 CRF 19, veryfast, BT.709, 30 fps, with a light grain that dithers gradients.
+  Visible film grain survives the encoder only at about 150 MB a minute, so it stays subtle.
 - Shorts: keep the picture between `f.top` and `f.bottom` (y 230-1360); captions sit at y 1500,
   three words at a time, the spoken word in gold.
 - Cues match the spoken text (`say`), whole words, case-insensitive: `f.cue("eight and a half")`.

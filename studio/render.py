@@ -19,7 +19,9 @@ from .timeline import Frame
 
 X264 = ["-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-pix_fmt", "yuv420p",
         "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709"]
-VF = "scale=out_color_matrix=bt709:out_range=tv,format=yuv420p,noise=c0s=5:c0f=t"
+# Light temporal grain on luma: dithers gradients against banding. Stronger grain survives
+# x264 at CRF 19 but costs ~150 MB a minute (tested Nov 17), so it stays subtle.
+VF = "scale=out_color_matrix=bt709:out_range=tv,format=yuv420p,noise=c0s=4:c0f=t+u"
 
 
 def draw_frame(video, scene, canvas, t, cks):
