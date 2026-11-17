@@ -1,0 +1,6 @@
+models/
+videos/*/out/
+__pycache__/
+*.pyc
+*.part
+*.part.mp4
