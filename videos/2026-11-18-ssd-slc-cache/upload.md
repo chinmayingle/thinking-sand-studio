@@ -1,16 +1,16 @@
-# Upload text: "Why your SSD drops from 5 GB/s to 800 MB/s" (Short, 57.5 s)
+# Upload text: "Why your SSD drops from 5,000 to 800 MB/s" (Short v2, 54.0 s)
 
-**Title:** Your 5 GB/s SSD Gets 6× Slower. Here's Why (SLC Cache)
+**Title:** Your SSD Gets 6× Slower When You Copy Big Files. Here's Why
 **Alternates:**
-- Why Your NVMe SSD Slows Down After 600 GB
-- 5,000 MB/s to 800 MB/s: The SSD Speed Nobody Mentions
+- 5,000 MB/s to 800 MB/s: Why Your SSD Slows Down
+- Your SSD Has a Secret Fast Lane (And It Runs Out)
 
 **Description:**
-Your SSD says 5 GB a second. Copy enough and it drops to about 800 MB/s, 6× slower.
+This SSD writes 5,000 MB a second. Copy something huge and it crashes to 800. Why?
 
-In TechPowerUp's test, a 2 TB WD Black SN7100 held about 5 GB/s for 648 GB, then fell to about 800 MB/s.
-Why: flash cells store 3 bits as one of 8 voltage levels, which is slow to write. So the drive writes 1 bit per cell first: the SLC cache.
-1 bit instead of 3 uses 3× the space, the cache is built from free space, and a nearly full drive gets a tiny one.
+Picture every flash cell as a glass of water. Storing 3 bits means filling it to one of 8 exact lines: slow, careful pouring. So at first your SSD cheats: empty or full, 1 bit, super fast. That's the SLC cache, the "fast lane".
+It takes 3 glasses to hold what 1 could, so the fast lane fills up and the speed drops. When you stop, the drive tidies up and the fast lane comes back, and the emptier your drive, the bigger it is.
+(Numbers: TechPowerUp's write test of a 2 TB WD Black SN7100: ~5,000 MB/s for 648 GB, then ~800 MB/s.)
 
 How full is your game drive right now? 👇
 
@@ -22,6 +22,6 @@ Sources: TechPowerUp, WD Black SN7100 2 TB review (write-intensive test); Igor's
 
 **Pinned comment:** How full is your game drive right now? Under 50% or living dangerously at 95%? 👇
 
-**Captions:** upload out/ssd-slc-cache.srt as English.
+**Captions:** upload out/ssd-slc-cache-v2.srt as English.
 
 **Facts to re-check on upload day:** nothing time-sensitive; the numbers are from one drive's review, empty drive, single-thread sequential writes. Other drives have different cache sizes (some use a small fixed cache).
