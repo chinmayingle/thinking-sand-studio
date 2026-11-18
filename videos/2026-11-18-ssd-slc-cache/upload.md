@@ -12,7 +12,7 @@ Picture every flash cell as a glass of water. Storing 3 bits means filling it to
 It takes 3 glasses to hold what 1 could, so the fast lane fills up and the speed drops. When you stop, the drive tidies up and the fast lane comes back, and the emptier your drive, the bigger it is.
 (Numbers: TechPowerUp's write test of a 2 TB WD Black SN7100: ~5,000 MB/s for 648 GB, then ~800 MB/s.)
 
-How full is your game drive right now? 👇
+How full is your drive right now? 👇
 
 Sources: TechPowerUp, WD Black SN7100 2 TB review (write-intensive test); Igor's Lab, "What does dynamic pSLC cache actually mean?"
 
@@ -20,7 +20,7 @@ Sources: TechPowerUp, WD Black SN7100 2 TB review (write-intensive test); Igor's
 
 **Tags:** ssd slc cache, why is my ssd slow, nvme ssd slow down, ssd write speed drop, slc cache explained, tlc vs slc, wd black sn7100, nvme vs sata, ssd buying guide, black friday ssd, how ssds work, the thinking sand
 
-**Pinned comment:** How full is your game drive right now? Under 50% or living dangerously at 95%? 👇
+**Pinned comment:** How full is your drive right now? Under 50% or living dangerously at 95%? 👇
 
 **Captions:** upload out/ssd-slc-cache-v2.srt as English.
 
