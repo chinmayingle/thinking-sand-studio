@@ -177,6 +177,8 @@ def mix(plan, duration, events, music=True, music_under_db=-17.0):
     out = np.stack([voice, voice], axis=1)
     if music:
         bed = music_bed(duration)[:n]
+        if len(bed) < n:  # music_bed truncates with int(), mix rounds: pad the last sample(s)
+            bed = np.pad(bed, ((0, n - len(bed)),) + ((0, 0),) * (bed.ndim - 1))
         env = _envelope(voice)
         talking = env > 0.02
         v_rms = np.sqrt(np.mean(voice[talking] ** 2)) if talking.any() else 0.1
